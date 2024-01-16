@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Page</title>
+  <link rel="stylesheet" href="/styles/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style="background-color:rgb(182, 187, 196); overflow-x: hidden;">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(22, 26, 48)">
+        <a class="navbar-brand" href="#"><img src="images/logos.jpg" alt="" style="width: 70px; height: 70px; border-radius: 50%;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-size: 1.6rem; font-weight: 1 rem; padding-right: 30px; color: #1abc9c;"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="font-size: 1.6rem; font-weight: 1 rem; padding-right: 30px; color: #1abc9c;"><b>About</b></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" style="font-size: 1.6rem; font-weight: 1 rem; padding-right: 30px; color: #1abc9c;"><b>Contact Us</b></a>
+            </li>
+
+          </ul>
+          <form class="form-inline my-2 my-lg-0" action="/search" method="POST">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        </div>
+      </nav>
+      <div class="row my-3">
+        <% newsData.articles.forEach(function(article, index) { %>
+          <div class="card my-2 mx-3" style="width: 18rem; background-color:rgb(244, 244, 244);">
+            <img class="card-img-top" src="<%= article.urlToImage %>" alt="Card image cap"  style="height: 150px; object-fit: cover;">
+            <div class="card-body">
+              <h5 class="card-title"><%- article.title %></h5>
+              <p class="card-text" style="max-height: 100px; overflow: hidden; text-overflow: ellipsis; color: #333333;"><%- article.description %></p>
+              <footer>
+                <a href="<%- article.url %>" class="btn btn-primary" style="background-color:#1abc9c ; ">Read More</a>
+              </footer>
+            </div>
+          </div>
+        <% }); %>
+      </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
