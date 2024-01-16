@@ -25,11 +25,12 @@ API Integration: The website utilizes the News API to fetch the latest news arti
 
 
 To run the project locally, follow these steps:
-
-Clone the repository from GitHub.
-Install the necessary dependencies using npm.
-Start the Node.js server using the command line.
-Access the website in your web browser.
+<ul>
+  <li>Clone the repository from GitHub.</li>
+  <li>Install the necessary dependencies using npm.</li>
+  <li>Start the Node.js server using the command line.</li>
+  <li>Access the website in your web browser.</li>
+</ul>
 Explore the world of news and stay up-to-date with the Blog Website – a project that combines the power of APIs, server-side scripting, and client-side interactivity to deliver a modern and engaging blogging platform.
 
 Feel free to customize and expand upon this description based on the specific features and aspects of your project!
