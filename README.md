@@ -32,5 +32,3 @@ To run the project locally, follow these steps:
   <li>Access the website in your web browser.</li>
 </ul>
 Explore the world of news and stay up-to-date with the Blog Website – a project that combines the power of APIs, server-side scripting, and client-side interactivity to deliver a modern and engaging blogging platform.
-
-Feel free to customize and expand upon this description based on the specific features and aspects of your project!
